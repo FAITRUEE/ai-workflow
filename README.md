@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Claude%20Code-plugin-D97757?style=flat" alt="Claude Code plugin">
-  <img src="https://img.shields.io/badge/skills-8-38BDF8?style=flat" alt="skills 8">
-  <img src="https://img.shields.io/badge/templates-2-818CF8?style=flat" alt="templates 2">
-  <img src="https://img.shields.io/badge/license-MIT-10B981?style=flat" alt="MIT license">
+  <img src="docs/images/badge-plugin.svg" alt="Claude Code plugin">
+  <img src="docs/images/badge-skills.svg" alt="skills 8">
+  <img src="docs/images/badge-templates.svg" alt="templates 2">
+  <img src="docs/images/badge-license.svg" alt="MIT license">
 </p>
 
 <p align="center">
