@@ -141,13 +141,13 @@ AI 두 개를 동시에 쓰면 빠르지만, 서로의 코드를 고치기 시�
 
 ## 📌 프로젝트에서 실제로 한 것
 
-| 프로젝트 | AI와 일한 방식 | 링크 |
-|---|---|---|
-| **눈치** — 해 눈부심 판정과 3D 운전 시뮬레이터 (4인 · 팀장) | Claude · Codex 영역 분담과 COLLAB.md · 사람마다 갈리던 정답 라벨을 GPT · Claude · Gemini에 같은 기준으로 판정시켜 갈리는 사진을 다시 검토(AI 답으로 정답을 바꾸지는 않음) · GitHub · 노션 · 슬랙 한 번에 읽기 | [시뮬레이터](https://nunchi-drive.vercel.app) · [GitHub](https://github.com/Nunchi-ML) |
-| **One Action** — 세 지역 자동 배포 · 고장 버전 자동 중단 (SoftBank 해커톤 최우수상) | AI 예상은 실측해서만 채택 · 확인한 결정을 CLAUDE.md에 쌓기 · 대회 뒤 `assumption-check`로 | [gitops](https://github.com/Crystal-SBHackathon2026/gitops) |
-| **타운시그널** — 창업 지원금으로 동네 추천 (5인 · CTO) | Claude Code가 노션 명세를 직접 읽고 쓰게 연결 · 노션에 올릴 때 현재본을 먼저 읽고 팀원 문서는 고치지 않는 규칙 · AI 요약문 숫자는 DB 값에서만 · `notion-publish` · `slack-worklog` | [서비스](https://town-signal.vercel.app) |
-| **NowWhat** — 할 일 우선순위 추천 (1인 · 3일) | 기획 문서 다섯 개를 AI가 먼저 읽는 정본으로 · 화면 · 기능 번호를 파일 이름에 써서 코드와 대조 · 서버를 띄워 확인하는 스킬(`api-verify`) · 버린 설계 기록 | [web](https://github.com/FAITRUEE/NowWhat_web) · [server](https://github.com/FAITRUEE/NowWhat_was) |
-| **낙상 감지** — 소리로 낙상을 감지해 보호자에게 알림 (5인 · 팀장, 기업 과제) | CLAUDE.md의 남은 과제 목록으로 서버 간 계약 구멍을 추적해 정리 | — |
+| 프로젝트 | AI와 일한 방식 | 남긴 것 | 서비스 | 코드 |
+|---|---|---|---|---|
+| **눈치**<br>해 눈부심 판정 · 3D 운전 시뮬레이터<br>4인 · 팀장 | Claude · Codex 영역 분담 · 갈리던 정답 라벨을 세 AI에 같은 기준으로 판정시켜 다시 검토(정답은 사람이) · GitHub · 노션 · 슬랙 한 번에 읽기 | `COLLAB.md`<br>`notion-team-hub` | [열기](https://nunchi-drive.vercel.app) | [GitHub](https://github.com/Nunchi-ML) |
+| **One Action**<br>세 지역 자동 배포 · 고장 버전 자동 중단<br>4인 · SoftBank 해커톤 최우수상 | AI 예상은 실측해서만 채택 · 확인한 결정을 CLAUDE.md에 쌓기 · 착수 전 팀원의 [작업 시작]부터 읽기 | `assumption-check`<br>`slack-worklog` | — | [GitHub](https://github.com/Crystal-SBHackathon2026) |
+| **타운시그널**<br>창업 지원금으로 동네 추천<br>5인 · CTO | Claude Code가 노션 명세를 직접 읽고 쓰게 연결 · 현재본을 먼저 읽고 팀원 문서는 안 고치기 · AI 요약문 숫자는 DB 값에서만 | `notion-publish`<br>`slack-worklog` | [열기](https://town-signal.vercel.app) | [GitHub](https://github.com/Town-Signal) |
+| **NowWhat**<br>할 일 우선순위 추천<br>1인 · 3일 | 기획 문서 다섯 개를 AI가 먼저 읽는 정본으로 · 화면 · 기능 번호로 코드와 대조 · 버린 설계를 문서에 남기기 | `api-verify`<br>`templates/CLAUDE.md` | — | [GitHub](https://github.com/FAITRUEE?tab=repositories&q=NowWhat) |
+| **낙상 감지**<br>소리로 낙상을 감지해 보호자에게 알림<br>5인 · 팀장 · 기업 과제 | CLAUDE.md의 남은 과제 목록으로 서버 간 계약 구멍을 추적해 정리 · 3개 저장소에 PR 템플릿 · 자동 라벨 | `templates/CLAUDE.md`<br>`github-team-setup` | [열기](https://audio-fall-care-web.vercel.app) | [GitHub](https://github.com/AudioFallCare) |
 
 ## 📄 양식
 
