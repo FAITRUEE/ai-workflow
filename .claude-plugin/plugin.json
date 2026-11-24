@@ -1,0 +1,10 @@
+{
+  "name": "ai-workflow",
+  "version": "1.0.0",
+  "description": "AI에게 맡기고, 직접 재 보고, 확인한 것은 다음 작업이 읽게 남기는 Claude Code 작업 방식",
+  "author": {
+    "name": "FAITRUEE"
+  },
+  "repository": "https://github.com/FAITRUEE/ai-workflow",
+  "keywords": ["workflow", "verification", "notion", "team", "ml"]
+}

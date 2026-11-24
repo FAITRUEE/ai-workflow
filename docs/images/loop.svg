@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="450" viewBox="0 0 1200 450">
+  <defs>
+    <style>
+      .f{font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+      .t{font-size:26px;font-weight:800;fill:#0F172A}
+      .s{font-size:17px;fill:#475569}
+      .e{font-size:15px;fill:#334155}
+      .n{font-size:15px;font-weight:800;fill:#ffffff}
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="450" rx="24" fill="#F8FAFC"/>
+  <text class="f" x="48" y="62" font-size="24" font-weight="800" fill="#0F172A">한 바퀴 — 모든 프로젝트에서 같은 순서로 일했습니다</text>
+
+  <!-- cards -->
+  <g class="f">
+    <!-- 1 -->
+    <rect x="40" y="100" width="255" height="270" rx="18" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="40" y="100" width="255" height="8" rx="4" fill="#38BDF8"/>
+    <circle cx="80" cy="150" r="20" fill="#38BDF8"/><text class="n" x="80" y="156" text-anchor="middle">1</text>
+    <text class="t" x="64" y="208">맥락을 먼저</text>
+    <text class="s" x="64" y="238">AI가 먼저 읽는 안내 문서</text>
+    <text class="s" x="64" y="262">(CLAUDE.md)를 둔다</text>
+    <text class="e" x="64" y="306">· 설계 결정 · 남은 과제</text>
+    <text class="e" x="64" y="330">· 버린 설계는 되살리지 않게</text>
+
+    <!-- 2 -->
+    <rect x="325" y="100" width="255" height="270" rx="18" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="325" y="100" width="255" height="8" rx="4" fill="#818CF8"/>
+    <circle cx="365" cy="150" r="20" fill="#818CF8"/><text class="n" x="365" y="156" text-anchor="middle">2</text>
+    <text class="t" x="349" y="208">역할을 나눈다</text>
+    <text class="s" x="349" y="238">AI끼리, AI와 나 사이</text>
+    <text class="s" x="349" y="262">맡을 일을 정한다</text>
+    <text class="e" x="349" y="306">· Claude 화면 · Codex 서버</text>
+    <text class="e" x="349" y="330">· AI는 PR까지, 병합은 나</text>
+
+    <!-- 3 -->
+    <rect x="610" y="100" width="255" height="270" rx="18" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="610" y="100" width="255" height="8" rx="4" fill="#F59E0B"/>
+    <circle cx="650" cy="150" r="20" fill="#F59E0B"/><text class="n" x="650" y="156" text-anchor="middle">3</text>
+    <text class="t" x="634" y="208">직접 재 본다</text>
+    <text class="s" x="634" y="238">AI의 예상은 재서</text>
+    <text class="s" x="634" y="262">맞을 때만 쓴다</text>
+    <text class="e" x="634" y="306">· "42초 절약" → 실측 20초 손해</text>
+    <text class="e" x="634" y="330">· 고장 버전을 일부러 배포</text>
+
+    <!-- 4 -->
+    <rect x="895" y="100" width="265" height="270" rx="18" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="895" y="100" width="265" height="8" rx="4" fill="#10B981"/>
+    <circle cx="935" cy="150" r="20" fill="#10B981"/><text class="n" x="935" y="156" text-anchor="middle">4</text>
+    <text class="t" x="919" y="208">남기고, 스킬로</text>
+    <text class="s" x="919" y="238">확인한 것은 문서에 쌓고</text>
+    <text class="s" x="919" y="262">반복되면 스킬로 만든다</text>
+    <text class="e" x="919" y="306">· 틀린 이유까지 기록</text>
+    <text class="e" x="919" y="330">· 다음 프로젝트가 읽음</text>
+  </g>
+
+  <!-- arrows between cards -->
+  <g stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#ar)">
+    <line x1="297" y1="235" x2="320" y2="235"/>
+    <line x1="582" y1="235" x2="605" y2="235"/>
+    <line x1="867" y1="235" x2="890" y2="235"/>
+    <path d="M 1027 372 C 1027 428, 600 428, 168 428 C 168 428, 168 405, 168 378"/>
+  </g>
+  <text class="f" x="600" y="402" text-anchor="middle" font-size="15" fill="#64748B">남긴 기록이 다음 작업의 맥락이 된다</text>
+</svg>

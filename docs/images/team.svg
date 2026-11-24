@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+  <defs>
+    <style>
+      .f{font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+      .src{font-size:19px;font-weight:800;fill:#0F172A}
+      .sub{font-size:14px;fill:#64748B}
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="430" rx="24" fill="#F8FAFC"/>
+  <text class="f" x="48" y="62" font-size="24" font-weight="800" fill="#0F172A">팀 전체가 AI로 일할 때 — 흩어진 기록을 한 번에 읽게</text>
+
+  <!-- sources -->
+  <g class="f">
+    <rect x="48" y="100" width="250" height="74" rx="14" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="84" cy="137" r="16" fill="#111827"/><text x="84" y="143" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">G</text>
+    <text class="src" x="114" y="133">GitHub</text><text class="sub" x="114" y="157">PR · 브랜치 · 배포 결과</text>
+
+    <rect x="48" y="190" width="250" height="74" rx="14" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="84" cy="227" r="16" fill="#334155"/><text x="84" y="233" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">N</text>
+    <text class="src" x="114" y="223">Notion</text><text class="sub" x="114" y="247">명세 · 실험 기록 · 일지</text>
+
+    <rect x="48" y="280" width="250" height="74" rx="14" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="84" cy="317" r="16" fill="#7C3AED"/><text x="84" y="323" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">S</text>
+    <text class="src" x="114" y="313">Slack</text><text class="sub" x="114" y="337">[작업 시작] · [작업 정리]</text>
+  </g>
+  <g stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M 302 137 C 360 137, 360 227, 410 227"/>
+    <line x1="302" y1="227" x2="410" y2="227"/>
+    <path d="M 302 317 C 360 317, 360 227, 410 227"/>
+  </g>
+
+  <!-- AI hub -->
+  <g class="f">
+    <rect x="416" y="160" width="300" height="134" rx="22" fill="#0EA5E9"/>
+    <text x="566" y="210" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">AI가 한 번에 읽고</text>
+    <text x="566" y="242" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">대조한 뒤 작업</text>
+    <text x="566" y="272" text-anchor="middle" font-size="14" fill="#E0F2FE">누가 무엇을 하는 중인지 먼저 확인</text>
+  </g>
+  <line x1="720" y1="227" x2="800" y2="227" stroke="#94A3B8" stroke-width="3" marker-end="url(#a)"/>
+  <g class="f">
+    <rect x="806" y="100" width="346" height="254" rx="20" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="834" y="144" font-size="20" font-weight="800" fill="#0F172A">막혔던 것과 푼 방법</text>
+    <text x="834" y="186" font-size="16" fill="#334155">· 무료 플랜이라 팀원은 게스트</text>
+    <text x="834" y="214" font-size="16" fill="#334155">· 게스트는 AI 연결(MCP)이 안 됨</text>
+    <rect x="828" y="234" width="302" height="1.5" fill="#E2E8F0"/>
+    <text x="834" y="268" font-size="16" font-weight="700" fill="#047857">→ 내부 통합 API 토큰으로 연결</text>
+    <text x="834" y="296" font-size="16" font-weight="700" fill="#047857">→ 그 절차를 스킬로 만들어</text>
+    <text x="852" y="322" font-size="16" font-weight="700" fill="#047857">팀원 모두 같은 기록을 읽게</text>
+  </g>
+  <text class="f" x="600" y="398" text-anchor="middle" font-size="15" fill="#64748B">같은 기능을 두 사람이 만드는 일은 규칙을 정한 뒤 다시 생기지 않았습니다 (One Action)</text>
+</svg>

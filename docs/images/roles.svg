@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+  <defs>
+    <style>
+      .f{font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+      .h{font-size:28px;font-weight:800;fill:#ffffff}
+      .l{font-size:17px;fill:#1E293B}
+      .c{font-size:15px;font-weight:700;fill:#475569}
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="460" rx="24" fill="#F8FAFC"/>
+  <text class="f" x="48" y="62" font-size="24" font-weight="800" fill="#0F172A">누가 무엇을 — 「눈치」 9일 프로젝트의 실제 분담</text>
+
+  <g class="f">
+    <!-- Claude -->
+    <rect x="40" y="110" width="330" height="230" rx="20" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="40" y="110" width="330" height="64" rx="20" fill="#D97757"/>
+    <rect x="40" y="150" width="330" height="24" fill="#D97757"/>
+    <text class="h" x="68" y="152">Claude</text>
+    <text class="l" x="68" y="214">· 3D 시뮬레이터 화면 (three.js)</text>
+    <text class="l" x="68" y="246">· 화면 쪽 PR</text>
+    <text class="l" x="68" y="278">· 서버 쪽 문제는 고치지 않고</text>
+    <text class="l" x="84" y="304">COLLAB.md에 적어 넘김</text>
+
+    <!-- Codex -->
+    <rect x="830" y="110" width="330" height="230" rx="20" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="830" y="110" width="330" height="64" rx="20" fill="#111827"/>
+    <rect x="830" y="150" width="330" height="24" fill="#111827"/>
+    <text class="h" x="858" y="152">Codex</text>
+    <text class="l" x="858" y="214">· 서버 · 모델 배포 코드</text>
+    <text class="l" x="858" y="246">· 서버 쪽 PR</text>
+    <text class="l" x="858" y="278">· 화면 코드의 규격 불일치를</text>
+    <text class="l" x="874" y="304">찾아 COLLAB.md로 전달</text>
+
+    <!-- COLLAB -->
+    <rect x="460" y="168" width="280" height="76" rx="16" fill="#EEF2FF" stroke="#818CF8" stroke-width="2"/>
+    <text x="600" y="200" text-anchor="middle" font-size="20" font-weight="800" fill="#3730A3">COLLAB.md</text>
+    <text x="600" y="228" text-anchor="middle" font-size="15" fill="#4338CA">서로 찾은 문제를 주고받는 문서</text>
+  </g>
+  <g stroke="#64748B" stroke-width="3" fill="none">
+    <line x1="374" y1="206" x2="454" y2="206" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="746" y1="206" x2="826" y2="206" marker-start="url(#a)" marker-end="url(#a)"/>
+    <path d="M 205 344 L 205 386 L 470 386" marker-end="url(#a)"/>
+    <path d="M 995 344 L 995 386 L 730 386" marker-end="url(#a)"/>
+  </g>
+  <g class="f">
+    <text class="c" x="250" y="378">PR</text>
+    <text class="c" x="920" y="378">PR</text>
+    <!-- Me -->
+    <rect x="474" y="356" width="252" height="70" rx="35" fill="#0EA5E9"/>
+    <text x="600" y="388" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">나 — 결정과 병합</text>
+    <text x="600" y="412" text-anchor="middle" font-size="14" fill="#E0F2FE">방향 · 라벨링 · 측정 기준 · 병합</text>
+  </g>
+</svg>
