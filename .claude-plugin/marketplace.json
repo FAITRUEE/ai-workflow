@@ -5,16 +5,22 @@
   },
   "metadata": {
     "description": "AI에게 맡기고, 직접 재 보고, 확인한 것은 다음 작업이 읽게 남기는 Claude Code 작업 방식",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "ai-workflow",
       "source": "./",
-      "description": "확인하고 적기(assumption-check) · 노션 팀 공간 세팅과 팀원 AI 연결(notion-team-hub) · 분류 모델 실수 분석(oof-error-analysis)",
+      "description": "확인·검증(assumption-check · api-verify · oof-error-analysis) · 팀 협업(slack-worklog · notion-team-hub · notion-publish · github-team-setup) · 기록(contribution-audit) — 스킬 8종",
       "category": "productivity",
-      "tags": ["workflow", "verification", "notion", "team", "ml"]
+      "tags": [
+        "workflow",
+        "verification",
+        "notion",
+        "team",
+        "ml"
+      ]
     }
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
