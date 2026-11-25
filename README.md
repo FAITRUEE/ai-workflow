@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://faitruee.github.io/ai-workflow/"><b>소개 페이지</b></a> ·
   <a href="#-설치">설치</a> ·
   <a href="#-처음이라면">처음이라면</a> ·
   <a href="#-스킬-8종">스킬 8종</a> ·
