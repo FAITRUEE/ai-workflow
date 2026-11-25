@@ -209,9 +209,13 @@ dialog[open]{animation:up .38s cubic-bezier(.2,.8,.2,1)}
 
 /* 네 단계 */
 .loop{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.loop::before{content:"";position:absolute;left:24px;right:24px;top:30px;height:2px;background:var(--line2)}
-.loop::after{content:"";position:absolute;left:24px;right:24px;top:30px;height:2px;background:linear-gradient(90deg,var(--sky),var(--violet),var(--green));transform:scaleX(0);transform-origin:left;transition:transform 1.8s cubic-bezier(.6,0,.2,1)}
-.loop.on::after{transform:scaleX(1)}
+.loop::before,.loop::after{content:none}
+.step::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:16px 16px 0 0;background:linear-gradient(90deg,var(--sky),var(--violet));transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.6,0,.2,1)}
+.loop.on .step::before{transform:scaleX(1)}
+.loop.on .step:nth-child(2)::before{transition-delay:.4s}.loop.on .step:nth-child(3)::before{transition-delay:.8s}.loop.on .step:nth-child(4)::before{transition-delay:1.2s}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-19px;top:34px;z-index:2;display:grid;place-items:center;width:20px;height:20px;font:700 13px var(--mono);color:var(--dim);background:var(--bg);border:1px solid var(--line2);border-radius:50%;transition:color .5s,border-color .5s}
+.loop.on .step:not(:last-child)::after{color:var(--sky);border-color:var(--sky)}
+.loop.on .step:nth-child(2)::after{transition-delay:.4s}.loop.on .step:nth-child(3)::after{transition-delay:.8s}
 .step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 22px 24px;opacity:.35;transform:translateY(12px);transition:opacity .6s,transform .6s,border-color .6s}
 .loop.on .step{opacity:1;transform:none}
 .loop.on .step:nth-child(2){transition-delay:.4s}.loop.on .step:nth-child(3){transition-delay:.8s}.loop.on .step:nth-child(4){transition-delay:1.2s}
@@ -253,7 +257,7 @@ footer a{color:var(--muted)}
   .cover{grid-template-columns:1fr;min-height:0} .cover .right{min-height:620px} .diff{transform:none}
   .grid{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .loop{grid-template-columns:1fr 1fr} .loop::before,.loop::after{display:none}
+  .loop{grid-template-columns:1fr 1fr} .step::after{display:none!important}
   .nav nav a:not(.gh){display:none}
 }
 @media (max-width:640px){
