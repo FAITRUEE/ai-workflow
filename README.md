@@ -100,8 +100,6 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 ## 🧰 스킬 12종
 
-<br>
-
 > 스킬 이름을 누르면 자세한 설명이 펼쳐집니다.
 
 ### 확인 · 검증
