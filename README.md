@@ -31,6 +31,8 @@ AI 코딩 도구는 코드를 빨리 써 줍니다.
 > **AI에게는 초안과 구현을 맡기고,**<br>
 > **방향 · 기준 · 확인 · 병합은 제가 합니다.**
 
+🌐 **한눈에 보기** — 스킬 8종을 눌러 펼쳐 보는 소개 페이지: **[faitruee.github.io/ai-workflow](https://faitruee.github.io/ai-workflow/)**
+
 <br>
 
 ## ⚡ 설치
