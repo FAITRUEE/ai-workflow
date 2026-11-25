@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <p align="center">
   <img src="docs/images/banner.svg" alt="AI와 일하는 방식 — 맡기고, 직접 재 보고, 확인한 것은 남긴다" width="100%">
 </p>
@@ -526,4 +528,4 @@ Claude는 `description`을 보고 언제 이 스킬을 켤지 판단합니다.<b
 
 [MIT](LICENSE)
 
-<p align="right"><a href="#">↑ 맨 위로</a></p>
+<p align="right"><a href="#readme-top">↑ 맨 위로</a></p>
