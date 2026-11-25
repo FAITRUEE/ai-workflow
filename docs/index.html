@@ -502,7 +502,7 @@ new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){loop.class
 // 스킬을 펼칠 때 내용이 부드럽게 나온다
 document.querySelectorAll('details.skill').forEach(d=>d.addEventListener('toggle',()=>{if(d.open){const b=d.querySelector('.sbody');b.classList.remove('opening');void b.offsetWidth;b.classList.add('opening')}}));
 // 칩·앵커로 이동하면 해당 스킬을 펼치고 잠깐 강조한다
-function openFromHash(){const el=document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');requestAnimationFrame(()=>el.scrollIntoView({block:'start'}))}}
+function openFromHash(){const el=document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');requestAnimationFrame(()=>el.scrollIntoView({block:'start',behavior:'instant'}))}}
 window.addEventListener('hashchange',openFromHash);window.addEventListener('load',()=>setTimeout(openFromHash,60));
 </script>
 </body>
