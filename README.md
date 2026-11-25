@@ -100,21 +100,6 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 ## 🧰 스킬 12종
 
-| 묶음 | 스킬 | 한 줄 |
-|---|---|---|
-| **확인 · 검증** | [`assumption-check`](skills/assumption-check/SKILL.md) | "작동한다"고 적기 전에 실제로 통과시키고, 틀린 이유까지 남긴다 |
-| | [`api-verify`](skills/api-verify/SKILL.md) | 서버를 띄워 가입부터 권한 확인까지 실제 API로 한 바퀴 돌린다 |
-| | [`doc-drift-check`](skills/doc-drift-check/SKILL.md) | 노션 명세 · README를 지금 코드와 한 줄씩 대조해 낡은 곳을 근거와 함께 찾는다 |
-| | [`oof-error-analysis`](skills/oof-error-analysis/SKILL.md) | 분류 모델이 어디서 틀렸는지 구간별로 세고, 틀린 행을 직접 본다 |
-| **팀 협업** | [`slack-worklog`](skills/slack-worklog/SKILL.md) | [작업 시작] · [작업 정리] 슬랙 초안. 남의 [작업 시작]부터 읽는다 |
-| | [`notion-team-hub`](skills/notion-team-hub/SKILL.md) | 노션 팀 공간을 정해진 틀로 깔고, 게스트 팀원도 AI로 읽게 연결한다 |
-| | [`notion-publish`](skills/notion-publish/SKILL.md) | md 원고를 노션 정본에 반영. 현재본을 먼저 읽고 합친다 |
-| | [`github-team-setup`](skills/github-team-setup/SKILL.md) | 조직 · 저장소 · PR 템플릿 · 자동 라벨을 첫날 깐다 |
-| **기록 · 전달** | [`contribution-audit`](skills/contribution-audit/SKILL.md) | 팀 프로젝트에서 내가 한 것만 git blame · PR로 가려 남긴다 |
-| | [`repo-showcase`](skills/repo-showcase/SKILL.md) | 끝난 저장소를 직접 띄워 확인 → 버그 수정 → 새 스크린샷으로 README를 다시 만든다 |
-| | [`presentation-review`](skills/presentation-review/SKILL.md) | 발표 자료를 처음 듣는 청중 눈으로 쪽마다 점검하고, 고른 번호만 고친다 |
-| **정리** | [`workspace-cleanup`](skills/workspace-cleanup/SKILL.md) | 쌓인 임시 파일은 휴지통으로, 뒤섞인 문서는 정본 · 지난 기록 · 폴더 안내로 |
-
 <br>
 
 > 스킬 이름을 누르면 자세한 설명이 펼쳐집니다.
