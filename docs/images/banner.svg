@@ -25,9 +25,10 @@
     <path d="M 50 -38 l 16 -4 l -6 16" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
     <text class="f" x="0" y="9" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">AI</text>
   </g>
-  <text class="f" x="64" y="88" font-size="20" font-weight="600" fill="#93C5FD" letter-spacing="3">CLAUDE CODE WORKFLOW</text>
-  <text class="f" x="62" y="158" font-size="56" font-weight="800" fill="#ffffff">AI와 일하는 방식</text>
-  <rect x="64" y="182" width="120" height="6" rx="3" fill="url(#acc)"/>
-  <text class="f" x="64" y="232" font-size="26" font-weight="500" fill="#E2E8F0">맡기고 · 직접 재 보고 · 확인한 것은 남긴다</text>
-  <text class="f" x="64" y="272" font-size="19" fill="#94A3B8">프로젝트 6개를 하며 굳힌 규칙과, 그 규칙을 옮긴 Claude Code 스킬 12종</text>
+  <text class="f" x="64" y="76" font-size="20" font-weight="600" fill="#93C5FD" letter-spacing="3">CLAUDE CODE WORKFLOW</text>
+  <text class="f" x="62" y="136" font-size="48" font-weight="800" fill="#ffffff">혼자 잘 쓰던 AI를,</text>
+  <text class="f" x="62" y="194" font-size="48" font-weight="800" fill="url(#acc)">모두가 쓰는 방식으로.</text>
+  <rect x="64" y="214" width="120" height="6" rx="3" fill="url(#acc)"/>
+  <text class="f" x="64" y="256" font-size="24" font-weight="500" fill="#E2E8F0">맡기고 · 직접 재 보고 · 남긴 것을 나눈다</text>
+  <text class="f" x="64" y="290" font-size="18" fill="#94A3B8">프로젝트 6개를 하며 굳힌 규칙을, 누구나 설치해 쓰게 옮긴 Claude Code 스킬 12종</text>
 </svg>

@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <p align="center">
-  <img src="docs/images/banner.svg" alt="AI와 일하는 방식 — 맡기고, 직접 재 보고, 확인한 것은 남긴다" width="100%">
+  <img src="docs/images/banner.svg" alt="혼자 잘 쓰던 AI를, 모두가 쓰는 방식으로 — 맡기고, 직접 재 보고, 남긴 것을 나눈다" width="100%">
 </p>
 
 <p align="center">
