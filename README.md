@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="docs/images/badge-plugin.svg" alt="Claude Code plugin">
-  <img src="docs/images/badge-skills.svg" alt="skills 8">
+  <img src="docs/images/badge-skills.svg" alt="skills 11">
   <img src="docs/images/badge-templates.svg" alt="templates 2">
   <img src="docs/images/badge-license.svg" alt="MIT license">
 </p>
@@ -13,7 +13,7 @@
   <a href="https://faitruee.github.io/ai-workflow/"><b>소개 페이지</b></a> ·
   <a href="#-설치">설치</a> ·
   <a href="#-처음이라면">처음이라면</a> ·
-  <a href="#-스킬-8종">스킬 8종</a> ·
+  <a href="#-스킬-11종">스킬 11종</a> ·
   <a href="#-일하는-방식">일하는 방식</a> ·
   <a href="#-프로젝트에서-실제로-한-것">프로젝트 사례</a> ·
   <a href="#-양식">양식</a>
@@ -26,12 +26,12 @@ AI 코딩 도구는 코드를 빨리 써 줍니다.
 그만큼 **확인하지 않은 예상이 사실처럼 문서에 적히기도 쉽습니다.**
 
 이 저장소는 프로젝트마다 그 문제를 겪으며 굳힌 규칙과,<br>
-그 규칙을 Claude Code가 매번 따르도록 옮긴 **스킬 8종 · 양식 2종**을 모은 것입니다.
+그 규칙을 Claude Code가 매번 따르도록 옮긴 **스킬 11종 · 양식 2종**을 모은 것입니다.
 
 > **AI에게는 초안과 구현을 맡기고,**<br>
 > **방향 · 기준 · 확인 · 병합은 제가 합니다.**
 
-🌐 **한눈에 보기** — 스킬 8종을 눌러 펼쳐 보는 소개 페이지: **[faitruee.github.io/ai-workflow](https://faitruee.github.io/ai-workflow/)**
+🌐 **한눈에 보기** — 스킬 11종을 눌러 펼쳐 보는 소개 페이지: **[faitruee.github.io/ai-workflow](https://faitruee.github.io/ai-workflow/)**
 
 <br>
 
@@ -84,29 +84,34 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 ## 🚀 처음이라면
 
-8개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 고르세요.
+11개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 고르세요.
 
 | 지금 상황 | 먼저 써 볼 스킬 |
 |---|---|
 | 혼자 개발 중이고, AI가 "됐다"고 하는 게 불안하다 | [`assumption-check`](skills/assumption-check/SKILL.md) · [`api-verify`](skills/api-verify/SKILL.md) |
 | 팀 프로젝트를 막 시작한다 | [`github-team-setup`](skills/github-team-setup/SKILL.md) · [`notion-team-hub`](skills/notion-team-hub/SKILL.md) · [`slack-worklog`](skills/slack-worklog/SKILL.md) |
 | 분류 대회 · 실험에서 점수가 안 오른다 | [`oof-error-analysis`](skills/oof-error-analysis/SKILL.md) |
-| 끝난 팀 프로젝트를 이력서 · 포트폴리오에 정리한다 | [`contribution-audit`](skills/contribution-audit/SKILL.md) |
+| 노션 명세 · README가 지금 코드와 맞는지 모르겠다 | [`doc-drift-check`](skills/doc-drift-check/SKILL.md) |
+| 끝난 팀 프로젝트를 이력서 · 포트폴리오에 정리한다 | [`contribution-audit`](skills/contribution-audit/SKILL.md) · [`repo-showcase`](skills/repo-showcase/SKILL.md) |
+| 발표가 코앞인데 청중이 이해할지 모르겠다 | [`presentation-review`](skills/presentation-review/SKILL.md) |
 
 <br>
 
-## 🧰 스킬 8종
+## 🧰 스킬 11종
 
 | 묶음 | 스킬 | 한 줄 |
 |---|---|---|
 | **확인 · 검증** | [`assumption-check`](skills/assumption-check/SKILL.md) | "작동한다"고 적기 전에 실제로 통과시키고, 틀린 이유까지 남긴다 |
 | | [`api-verify`](skills/api-verify/SKILL.md) | 서버를 띄워 가입부터 권한 확인까지 실제 API로 한 바퀴 돌린다 |
+| | [`doc-drift-check`](skills/doc-drift-check/SKILL.md) | 노션 명세 · README를 지금 코드와 한 줄씩 대조해 낡은 곳을 근거와 함께 찾는다 |
 | | [`oof-error-analysis`](skills/oof-error-analysis/SKILL.md) | 분류 모델이 어디서 틀렸는지 구간별로 세고, 틀린 행을 직접 본다 |
 | **팀 협업** | [`slack-worklog`](skills/slack-worklog/SKILL.md) | [작업 시작] · [작업 정리] 슬랙 초안. 남의 [작업 시작]부터 읽는다 |
 | | [`notion-team-hub`](skills/notion-team-hub/SKILL.md) | 노션 팀 공간을 정해진 틀로 깔고, 게스트 팀원도 AI로 읽게 연결한다 |
 | | [`notion-publish`](skills/notion-publish/SKILL.md) | md 원고를 노션 정본에 반영. 현재본을 먼저 읽고 합친다 |
 | | [`github-team-setup`](skills/github-team-setup/SKILL.md) | 조직 · 저장소 · PR 템플릿 · 자동 라벨을 첫날 깐다 |
-| **기록** | [`contribution-audit`](skills/contribution-audit/SKILL.md) | 팀 프로젝트에서 내가 한 것만 git blame · PR로 가려 남긴다 |
+| **기록 · 전달** | [`contribution-audit`](skills/contribution-audit/SKILL.md) | 팀 프로젝트에서 내가 한 것만 git blame · PR로 가려 남긴다 |
+| | [`repo-showcase`](skills/repo-showcase/SKILL.md) | 끝난 저장소를 직접 띄워 확인 → 버그 수정 → 새 스크린샷으로 README를 다시 만든다 |
+| | [`presentation-review`](skills/presentation-review/SKILL.md) | 발표 자료를 처음 듣는 청중 눈으로 쪽마다 점검하고, 고른 번호만 고친다 |
 
 <br>
 
@@ -143,6 +148,21 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 - **이렇게 말해 보세요** — *"서버 띄워서 확인해 봐"* · *"회원가입부터 끝까지 테스트해 줘"*
 - **시작된 곳** — NowWhat (1인 · 3일)
   - Windows에서 `curl`에 한글을 바로 넣으면 깨져서 **403처럼 보이던** 함정까지 기록
+
+#### 🧭 `doc-drift-check` — 문서가 지금 코드와 맞는지
+
+AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 · 배포 문서는 처음 쓴 날에 멈춰 있기 쉽습니다.<br>
+그러면 팀원도, 다음 작업을 하는 AI도 **낡은 문서를 정본으로 믿고** 일합니다.
+
+문서를 주장 단위로 쪼개 코드와 하나씩 대조하고, 어긋난 줄마다 **근거(파일 · PR)** 를 붙여 표로 보여 줍니다.
+
+```text
+✅ 맞음 · ❌ 낡음 · ⚠️ 코드가 문서의 결정을 어김 · ❓ 저장소 밖이라 확인 못 함 · ➕ 문서에 빠짐
+```
+
+- **이렇게 말해 보세요** — *"이 문서 코드랑 맞는지 봐 줘"* · *"오늘 머지한 거 문서에 반영됐어?"*
+- **시작된 곳** — 타운시그널. 노션 문서를 붙여 넣고 코드와 대조하는 일을 5번 반복
+  - 내 담당 문서 4개가 모두 그날 머지한 PR #13~#18을 반영하지 못하고 있었던 일
 
 #### 🔍 `oof-error-analysis` — 분류 모델의 실수 뜯어보기
 
@@ -222,7 +242,7 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 <br>
 
-### 기록
+### 기록 · 전달
 
 #### 🧾 `contribution-audit` — 내가 한 것만 가려 문서로
 
@@ -237,6 +257,36 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 - **이렇게 말해 보세요** — *"이 프로젝트 내 기여 정리해 줘"* · *"이거 서류에 써도 되는지 봐 줘"*
 - **시작된 곳** — 프로젝트 13개를 이 틀로 정리
+
+#### 🪄 `repo-showcase` — 저장소를 보여 줄 수 있는 상태로
+
+서류에 저장소 링크를 걸면 심사자는 README 첫 화면과 데모 하나만 눌러 봅니다.<br>
+그런데 끝난 프로젝트는 대개 **데모가 깨져 있거나, README 사진이 예전 화면**입니다.
+
+```text
+직접 띄워 데모 점검 → 보여 주는 데 걸리는 버그만 수정 → 스크린샷 다시 찍기 → README · 조직 프로필 다시 쓰기 → GitHub에서 직접 열어 확인
+```
+
+- **이렇게 말해 보세요** — *"이 저장소 포트폴리오로 쓸 만한지 봐 줘"* · *"README 사진 넣어서 돋보이게"*
+- **시작된 곳** — 바이브코딩 공모전 저장소 · NowWhat
+  - 돌려 보니 서명 시뮬레이터에서 **버그 4개**(결과가 한 줄로 뭉침, 예시 입력이 비어 있음 등)가 나와 고친 뒤 사진을 새로 찍음
+
+#### 🎤 `presentation-review` — 청중 눈으로 발표 자료 점검
+
+만든 사람은 모든 숫자의 뜻을 알지만, 청중은 그 장을 처음 몇 초 보고 넘어갑니다.<br>
+장마다 *"처음 듣는 사람이 여기서 무엇을 가져가나"* 만 묻습니다.
+
+- 숫자에 단위 · 뜻이 붙었나 (*"109/255"*, *"0.471"*)
+- AUC인지 F1인지 지표 이름이 있나
+- 그래프마다 무엇을 그렸는지 보이나
+- 왜 문제인지가 해결책보다 먼저 나오나
+- 겹치는 장, 앞에 안 나온 말이 갑자기 나오는 장은 없나
+- 대본은 실제로 소리 내 읽을 문장만 남았나
+
+고칠 곳을 쪽 번호 목록으로 보여 주고, **사용자가 고른 번호만** 고칩니다. 원하면 예상 질문도 뽑습니다.
+
+- **이렇게 말해 보세요** — *"청중이 이해할까?"* · *"최종 점검해 줘"* · *"예상 질문 뽑아 줘"*
+- **시작된 곳** — 눈치 최종 발표(69장). "이 숫자 뭔지 모를 것 같아"를 수십 번 반복한 뒤
 
 <br>
 
@@ -358,14 +408,17 @@ ai-workflow/
 ├── skills/
 │   ├── assumption-check/     # 확인하고 적기
 │   ├── api-verify/           # 서버 띄워 실제 API로 확인
+│   ├── doc-drift-check/      # 문서 ↔ 코드 대조
 │   ├── oof-error-analysis/   # + scripts/analyze.py
 │   ├── slack-worklog/        # [작업 시작] · [작업 정리] 초안
 │   ├── notion-team-hub/      # + references/ · scripts/verify_notion_integration.py
 │   ├── notion-publish/       # md 원고 → 노션 정본
 │   ├── github-team-setup/    # + templates/ (labeler · PR · 이슈 템플릿)
-│   └── contribution-audit/   # 내 기여만 가려 문서로
+│   ├── contribution-audit/   # 내 기여만 가려 문서로
+│   ├── repo-showcase/        # 저장소를 보여 줄 수 있는 상태로
+│   └── presentation-review/  # 청중 눈으로 발표 자료 점검
 ├── templates/                # CLAUDE.md · COLLAB.md 양식
-└── docs/images/              # README 그림
+└── docs/                     # 소개 페이지(index.html) · README 그림 · 실제 화면
 ```
 
 각 `SKILL.md`는 맨 위에 `name`과 `description`만 둡니다.

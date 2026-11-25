@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI와 일하는 방식 — Claude Code 스킬 8종</title>
-<meta name="description" content="AI에게 맡기고, 직접 재 보고, 확인한 것은 남기는 Claude Code 스킬 8종과 양식 2종">
+<title>AI와 일하는 방식 — Claude Code 스킬 11종</title>
+<meta name="description" content="AI에게 맡기고, 직접 재 보고, 확인한 것은 남기는 Claude Code 스킬 11종과 양식 2종">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,6 +109,11 @@ details[open] .plus::after{transform:rotate(0)}
 .say{display:inline-block;background:var(--paper);border-radius:8px;padding:2px 10px;margin:0 6px 6px 0}
 .flow{font:13px/1.8 var(--mono);background:var(--paper);padding:10px 14px;border-radius:8px;color:var(--ink)}
 .flow b{color:#DC2626}
+.shot{margin:4px 0 0}
+.shot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#0d1117}
+.shot figcaption{font-size:13px;color:var(--ink-3);margin-top:8px}
+.shot figcaption b{color:var(--ink-2);font-weight:600}
+.real{display:inline-block;font-size:12px;font-weight:600;color:var(--c);background:color-mix(in srgb,var(--c) 10%,#fff);border-radius:6px;padding:1px 8px;margin-left:10px;vertical-align:2px}
 .more{font-size:14px;font-weight:600;color:var(--c);text-decoration:none}
 .more:hover{text-decoration:underline}
 
@@ -190,7 +195,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <a class="brand" href="#">ai-workflow</a>
       <div class="links">
         <a href="#pick">처음이라면</a>
-        <a href="#skills">스킬 8종</a>
+        <a href="#skills">스킬 11종</a>
         <a href="#loop">일하는 방식</a>
         <a href="#projects">프로젝트</a>
         <a href="https://github.com/FAITRUEE/ai-workflow">GitHub</a>
@@ -200,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="hero-grid">
       <div>
         <h1>AI와<br>일하는 방식</h1>
-        <p class="lede">AI가 "됐다"고 한 것을 그대로 적지 않습니다. 직접 재 보고, 확인한 것만 남깁니다. 그 규칙을 Claude Code가 매번 따르도록 옮긴 스킬 8종과 양식 2종입니다.</p>
+        <p class="lede">AI가 "됐다"고 한 것을 그대로 적지 않습니다. 직접 재 보고, 확인한 것만 남깁니다. 그 규칙을 Claude Code가 매번 따르도록 옮긴 스킬 11종과 양식 2종입니다.</p>
         <div class="install">
 <pre id="cmd"><span>&gt; </span>/plugin marketplace add FAITRUEE/ai-workflow
 <span>&gt; </span>/plugin install ai-workflow@ai-workflow</pre>
@@ -224,7 +229,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section id="pick">
     <div class="wrap">
       <h2 class="sec">처음이라면, 지금 상황부터</h2>
-      <p class="sec-lede">8개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 써 보세요.</p>
+      <p class="sec-lede">11개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 써 보세요.</p>
       <div class="pick">
         <div class="pick-row"><p>혼자 개발 중인데, AI가 "됐다"고 하는 게 불안하다</p>
           <div class="chips"><a class="chip" style="--c:var(--g-verify)" href="#assumption-check">assumption-check</a><a class="chip" style="--c:var(--g-verify)" href="#api-verify">api-verify</a></div></div>
@@ -232,22 +237,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="chips"><a class="chip" style="--c:var(--g-team)" href="#github-team-setup">github-team-setup</a><a class="chip" style="--c:var(--g-team)" href="#notion-team-hub">notion-team-hub</a><a class="chip" style="--c:var(--g-team)" href="#slack-worklog">slack-worklog</a></div></div>
         <div class="pick-row"><p>분류 대회나 실험에서 점수가 안 오른다</p>
           <div class="chips"><a class="chip" style="--c:var(--g-verify)" href="#oof-error-analysis">oof-error-analysis</a></div></div>
-        <div class="pick-row"><p>끝난 팀 프로젝트를 이력서에 정리한다</p>
-          <div class="chips"><a class="chip" style="--c:var(--g-record)" href="#contribution-audit">contribution-audit</a></div></div>
+        <div class="pick-row"><p>노션 명세나 README가 지금 코드와 맞는지 모르겠다</p>
+          <div class="chips"><a class="chip" style="--c:var(--g-verify)" href="#doc-drift-check">doc-drift-check</a></div></div>
+        <div class="pick-row"><p>끝난 팀 프로젝트를 이력서·포트폴리오에 정리한다</p>
+          <div class="chips"><a class="chip" style="--c:var(--g-record)" href="#contribution-audit">contribution-audit</a><a class="chip" style="--c:var(--g-record)" href="#repo-showcase">repo-showcase</a></div></div>
+        <div class="pick-row"><p>발표가 코앞인데 청중이 이해할지 모르겠다</p>
+          <div class="chips"><a class="chip" style="--c:var(--g-record)" href="#presentation-review">presentation-review</a></div></div>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="wrap">
-      <h2 class="sec">스킬 8종</h2>
+      <h2 class="sec">스킬 11종</h2>
       <p class="sec-lede">눌러서 펼치면 무엇을 하는지, 어떻게 부탁하면 켜지는지, 어떤 일에서 시작됐는지 볼 수 있습니다.</p>
 
       <div class="group" style="--c:var(--g-verify)">
         <div class="group-head"><h3>확인과 검증</h3><span>"됐다"를 적기 전에</span></div>
 
         <details class="skill" id="assumption-check">
-          <summary><span class="sname">assumption-check</span><span class="sline">"작동한다"고 적기 전에 실제로 통과시키고, 틀린 이유까지 남긴다</span><span class="plus" aria-hidden="true"></span></summary>
+          <summary><span class="sname">assumption-check</span><span class="sline">"작동한다"고 적기 전에 실제로 통과시키고, 틀린 이유까지 남긴다<span class="real">실제 화면</span></span><span class="plus" aria-hidden="true"></span></summary>
           <div class="sbody">
             <p>틀렸으면 무엇이, 왜, 얼마나 틀렸고 내가 왜 그렇게 예상했는지 네 가지를 남깁니다. 원인을 못 찾았으면 그럴듯한 설명 대신 "특정하지 못했다"고 씁니다.</p>
             <dl>
@@ -255,6 +264,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
               <dt>이렇게 말해 보세요</dt><dd><span class="say">이거 진짜 되는 거 맞아? 확인해 봐</span><span class="say">배포 시간 줄었다고 써도 돼?</span></dd>
               <dt>시작된 곳</dt><dd>SoftBank 해커톤 One Action. 캐시로 42초 줄인다던 예상이 실측으로는 20초 손해</dd>
             </dl>
+            <figure class="shot"><img src="shots/assumption-check.jpg" alt="One Action 이슈 #24. "응답 검사로는 부분 에러율을 못 잡는다"는 예상을 장애를 직접 넣어 실측으로 확인하고 닫았습니다." loading="lazy"><figcaption><b>실제 화면</b> One Action 이슈 #24. "응답 검사로는 부분 에러율을 못 잡는다"는 예상을 장애를 직접 넣어 실측으로 확인하고 닫았습니다.</figcaption></figure>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/assumption-check/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
@@ -270,6 +280,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
               <dt>시작된 곳</dt><dd>NowWhat(1인, 3일). Windows에서 <code>curl</code>에 한글을 바로 넣으면 깨져서 403처럼 보이던 함정까지 기록</dd>
             </dl>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/api-verify/SKILL.md">SKILL.md 읽기</a>
+          </div>
+        </details>
+
+        <details class="skill" id="doc-drift-check">
+          <summary><span class="sname">doc-drift-check</span><span class="sline">노션 명세·README를 지금 코드와 한 줄씩 대조해 낡은 곳을 근거와 함께 찾는다</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="sbody">
+            <p>AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세와 배포 문서는 처음 쓴 날에 멈춰 있기 쉽습니다. 문서를 주장 단위로 쪼개 코드와 하나씩 대조하고, 어긋난 줄마다 근거(파일, PR)를 붙여 표로 보여 줍니다.</p>
+            <div class="flow">✅ 맞음 · ❌ 낡음 · ⚠️ 코드가 문서의 결정을 어김 · ❓ 저장소 밖이라 확인 못 함 · ➕ 문서에 빠짐</div>
+            <dl>
+              <dt>이렇게 말해 보세요</dt><dd><span class="say">이 문서 코드랑 맞는지 봐 줘</span><span class="say">오늘 머지한 거 문서에 반영됐어?</span></dd>
+              <dt>시작된 곳</dt><dd>타운시그널. 노션 문서를 붙여 넣고 코드와 대조하는 일을 5번 반복. 내 담당 문서 4개가 모두 그날 머지한 PR #13~#18을 반영하지 못하고 있었습니다</dd>
+            </dl>
+            <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/doc-drift-check/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
 
@@ -291,19 +314,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="group-head"><h3>팀 협업</h3><span>모두가 AI로 일해도 엉키지 않게</span></div>
 
         <details class="skill" id="slack-worklog">
-          <summary><span class="sname">slack-worklog</span><span class="sline">[작업 시작]·[작업 정리] 슬랙 초안. 남의 [작업 시작]부터 읽는다</span><span class="plus" aria-hidden="true"></span></summary>
+          <summary><span class="sname">slack-worklog</span><span class="sline">[작업 시작]·[작업 정리] 슬랙 초안. 남의 [작업 시작]부터 읽는다<span class="real">실제 화면</span></span><span class="plus" aria-hidden="true"></span></summary>
           <div class="sbody">
             <p>오늘 머지된 PR, 실험 기록, 다음 할 일을 모아 슬랙 초안을 만듭니다. 보내는 건 사람이 하고, 키나 토큰은 절대 넣지 않습니다. 착수 전에 다른 사람의 [작업 시작]부터 읽어 같은 일을 두 사람이 잡지 않게 합니다.</p>
             <dl>
               <dt>이렇게 말해 보세요</dt><dd><span class="say">작업 시작 메시지 써 줘</span><span class="say">오늘 한 거 정리해서 슬랙에</span></dd>
               <dt>시작된 곳</dt><dd>One Action에서 같은 기능을 두 사람이 만드는 일이 두 번 생긴 뒤, 타운시그널에서 스킬로</dd>
             </dl>
+            <figure class="shot"><img src="shots/slack-worklog.jpg" alt="타운시그널 [작업 시작] 메시지. 할 일 순서, 팀원에게 부탁할 것, 연결된 PR까지 한 번에. 팀원 이름은 가렸습니다." loading="lazy"><figcaption><b>실제 화면</b> 타운시그널 [작업 시작] 메시지. 할 일 순서, 팀원에게 부탁할 것, 연결된 PR까지 한 번에. 팀원 이름은 가렸습니다.</figcaption></figure>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/slack-worklog/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
 
         <details class="skill" id="notion-team-hub">
-          <summary><span class="sname">notion-team-hub</span><span class="sline">노션 팀 공간을 정해진 틀로 깔고, 게스트 팀원도 AI로 읽게 연결한다</span><span class="plus" aria-hidden="true"></span></summary>
+          <summary><span class="sname">notion-team-hub</span><span class="sline">노션 팀 공간을 정해진 틀로 깔고, 게스트 팀원도 AI로 읽게 연결한다<span class="real">실제 화면</span></span><span class="plus" aria-hidden="true"></span></summary>
           <div class="sbody">
             <p>새 팀 프로젝트의 노션(홈, 문서 6장, 칸반, 실험 기록, 일일진행일지)을 깔고, 다 만든 뒤 문서끼리 맞는지 점검합니다. 게스트 팀원도 각자 AI로 같은 노션을 읽도록 내부 통합 토큰 연결, 검증 스크립트, 설정법 공지문까지 다룹니다.</p>
             <dl>
@@ -311,6 +335,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
               <dt>이렇게 말해 보세요</dt><dd><span class="say">노션 팀 공간 만들어 줘</span><span class="say">팀원들도 Claude로 노션 읽게 해 줘</span></dd>
               <dt>들어 있는 것</dt><dd><code>references/</code> 홈 틀, 팀원 연결 절차, 공지문<br><code>scripts/verify_notion_integration.py</code> 토큰으로 무엇이 보이는지 확인</dd>
             </dl>
+            <figure class="shot"><img src="shots/notion-team-hub.jpg" alt="돈독 팀 노션. 영역별 문서 묶음과 칸반 보드. 팀원 이름은 가렸습니다." loading="lazy"><figcaption><b>실제 화면</b> 돈독 팀 노션. 영역별 문서 묶음과 칸반 보드. 팀원 이름은 가렸습니다.</figcaption></figure>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/notion-team-hub/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
@@ -327,20 +352,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </details>
 
         <details class="skill" id="github-team-setup">
-          <summary><span class="sname">github-team-setup</span><span class="sline">조직, 저장소, PR 템플릿, 브랜치 이름 자동 라벨을 첫날 깐다</span><span class="plus" aria-hidden="true"></span></summary>
+          <summary><span class="sname">github-team-setup</span><span class="sline">조직, 저장소, PR 템플릿, 브랜치 이름 자동 라벨을 첫날 깐다<span class="real">실제 화면</span></span><span class="plus" aria-hidden="true"></span></summary>
           <div class="sbody">
             <p>조직 하나에 <code>AI</code>, <code>BE</code>, <code>FE</code> 저장소. 조직 공통 PR·이슈 템플릿, 브랜치 이름(<code>feat/</code>, <code>fix/</code>, <code>docs/</code>)으로 PR 라벨이 자동으로 붙는 워크플로, [필수]·[권장]·[의견]으로 나눈 리뷰와 squash 병합. 실제로 쓰던 파일을 그대로 넣었습니다.</p>
             <dl>
               <dt>이렇게 말해 보세요</dt><dd><span class="say">깃허브 세팅해 줘</span><span class="say">PR 템플릿 만들고 라벨 자동으로 붙게</span></dd>
               <dt>시작된 곳</dt><dd>낙상 감지, 온점, 눈치, 스터디 매칭 서비스에서 매번 같은 것을 깔던 일</dd>
             </dl>
+            <figure class="shot"><img src="shots/github-team-setup.jpg" alt="Let's Study Now PR #35. 브랜치 이름으로 feature 라벨이 자동으로 붙고, 봇이 확인 사항을 남깁니다." loading="lazy"><figcaption><b>실제 화면</b> Let's Study Now PR #35. 브랜치 이름으로 feature 라벨이 자동으로 붙고, 봇이 확인 사항을 남깁니다.</figcaption></figure>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/github-team-setup/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
       </div>
 
       <div class="group" style="--c:var(--g-record)">
-        <div class="group-head"><h3>기록</h3><span>내가 한 것만, 정확하게</span></div>
+        <div class="group-head"><h3>기록과 전달</h3><span>내가 한 것만, 보는 사람이 알아듣게</span></div>
 
         <details class="skill" id="contribution-audit">
           <summary><span class="sname">contribution-audit</span><span class="sline">팀 프로젝트에서 내가 한 것만 git blame과 PR로 가려 문서로 남긴다</span><span class="plus" aria-hidden="true"></span></summary>
@@ -351,6 +377,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
               <dt>시작된 곳</dt><dd>프로젝트 13개를 이 틀로 정리</dd>
             </dl>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/contribution-audit/SKILL.md">SKILL.md 읽기</a>
+          </div>
+        </details>
+
+        <details class="skill" id="repo-showcase">
+          <summary><span class="sname">repo-showcase</span><span class="sline">끝난 저장소를 직접 띄워 확인하고, 고치고, 새 스크린샷으로 README를 다시 만든다</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="sbody">
+            <p>서류에 저장소 링크를 걸면 심사자는 README 첫 화면과 데모 하나만 눌러 봅니다. 그런데 끝난 프로젝트는 대개 데모가 깨져 있거나 README 사진이 예전 화면입니다. 실제로 돌려 본 것만 보여 주는 순서로 다시 정리합니다.</p>
+            <div class="flow">직접 띄워 데모 점검 → 보여 주는 데 걸리는 버그만 수정 → 스크린샷 다시 찍기 → README·조직 프로필 다시 쓰기 → GitHub에서 직접 열어 확인</div>
+            <dl>
+              <dt>이렇게 말해 보세요</dt><dd><span class="say">이 저장소 포트폴리오로 쓸 만한지 봐 줘</span><span class="say">README 사진 넣어서 돋보이게</span></dd>
+              <dt>시작된 곳</dt><dd>바이브코딩 공모전 저장소와 NowWhat. 돌려 보니 서명 시뮬레이터에서 버그 4개(결과가 한 줄로 뭉침, 예시 입력이 비어 있음 등)가 나와 고친 뒤 사진을 새로 찍었습니다</dd>
+            </dl>
+            <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/repo-showcase/SKILL.md">SKILL.md 읽기</a>
+          </div>
+        </details>
+
+        <details class="skill" id="presentation-review">
+          <summary><span class="sname">presentation-review</span><span class="sline">발표 자료를 처음 듣는 청중 눈으로 쪽마다 점검하고, 고른 번호만 고친다</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="sbody">
+            <p>만든 사람은 모든 숫자의 뜻을 알지만, 청중은 그 장을 처음 몇 초 보고 넘어갑니다. 장마다 "처음 듣는 사람이 여기서 무엇을 가져가나"만 묻습니다. 숫자에 단위와 뜻이 붙었는지, 지표 이름이 있는지, 그래프마다 무엇을 그렸는지 보이는지, 왜 문제인지가 해결책보다 먼저 나오는지, 대본이 실제로 읽을 문장인지 봅니다.</p>
+            <dl>
+              <dt>이렇게 말해 보세요</dt><dd><span class="say">청중이 이해할까?</span><span class="say">최종 점검해 줘</span><span class="say">예상 질문 뽑아 줘</span></dd>
+              <dt>시작된 곳</dt><dd>눈치 최종 발표(69장). "109/255가 뭔지 모를 것 같아", "AUC인지 F1인지 써야 할 것 같아"를 수십 번 반복한 뒤</dd>
+            </dl>
+            <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/presentation-review/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
       </div>
@@ -425,7 +476,7 @@ new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){loop.class
 // 스킬을 펼칠 때 내용이 부드럽게 나온다
 document.querySelectorAll('details.skill').forEach(d=>d.addEventListener('toggle',()=>{if(d.open){const b=d.querySelector('.sbody');b.classList.remove('opening');void b.offsetWidth;b.classList.add('opening')}}));
 // 칩·앵커로 이동하면 해당 스킬을 펼치고 잠깐 강조한다
-function openFromHash(){const el=document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash')}}
+function openFromHash(){const el=document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');requestAnimationFrame(()=>el.scrollIntoView({block:'start'}))}}
 window.addEventListener('hashchange',openFromHash);openFromHash();
 </script>
 </body>
