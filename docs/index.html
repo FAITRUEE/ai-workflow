@@ -550,7 +550,8 @@ function addRow(cls, txt) { const d = document.createElement('div'); d.className
 async function play(i) {
   const my = ++token, sc = SCENES[i], col = GCOL[DATA[sc.id].group];
   tabsEl.querySelectorAll('.wtab').forEach((t, k) => t.classList.toggle('on', k === i));
-  tabsEl.children[i].scrollIntoView({block: 'nearest', inline: 'nearest'});
+  const tb = tabsEl.children[i];
+  if (tb.offsetLeft < tabsEl.scrollLeft || tb.offsetLeft + tb.offsetWidth > tabsEl.scrollLeft + tabsEl.clientWidth) tabsEl.scrollTo({left: tb.offsetLeft - 8, behavior: reduce ? 'auto' : 'smooth'});
   win.style.setProperty('--c', col); demo.style.setProperty('--c', col);
   wopen.href = '#' + sc.id;
   screen.innerHTML = '';
@@ -564,8 +565,11 @@ async function play(i) {
   for (const [k, x] of sc.out) { addRow(k, x); if (!await wait(k === 'mut' ? 700 : 420, my)) return; }
   void prog.offsetWidth; prog.style.transition = 'width 3.4s linear'; prog.style.width = '100%';
   if (!await wait(3400, my)) return;
+  if (!visible) { pending = (i + 1) % SCENES.length; return; }
   play((i + 1) % SCENES.length);
 }
+let visible = true, pending = null;
+new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible && pending !== null) { const n = pending; pending = null; play(n); } }).observe(demo);
 tabsEl.addEventListener('click', e => { const b = e.target.closest('.wtab'); if (b) play(+b.dataset.i); });
 play(0);
 
