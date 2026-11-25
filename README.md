@@ -417,11 +417,13 @@ AI 두 개를 동시에 쓰면 빠르지만, 서로의 코드를 고치기 시�
 
 | 프로젝트 | 규모 · 역할 | 남긴 것 | 링크 |
 |---|---|---|---|
-| **눈치** — 해 눈부심 판정 · 3D 운전 시뮬레이터 | 4인 · 팀장 | `COLLAB.md` · `notion-team-hub` | [서비스](https://nunchi-drive.vercel.app) · [GitHub](https://github.com/Nunchi-ML) |
+| **눈치** — 해 눈부심 판정 · 3D 운전 시뮬레이터 | 4인 · 팀장 | `COLLAB.md` · `notion-team-hub` · `presentation-review` | [서비스](https://nunchi-drive.vercel.app) · [GitHub](https://github.com/Nunchi-ML) |
 | **One Action** — 세 지역 자동 배포 · 고장 버전 자동 중단 | 4인 · SoftBank 해커톤 최우수상 | `assumption-check` · `slack-worklog` | [GitHub](https://github.com/Crystal-SBHackathon2026) |
-| **타운시그널** — 창업 지원금으로 동네 추천 | 5인 · CTO | `notion-publish` · `slack-worklog` | [서비스](https://town-signal.vercel.app) · [GitHub](https://github.com/Town-Signal) |
-| **NowWhat** — 할 일 우선순위 추천 | 1인 · 3일 | `api-verify` · `templates/CLAUDE.md` | [GitHub](https://github.com/FAITRUEE?tab=repositories&q=NowWhat) |
+| **타운시그널** — 창업 지원금으로 동네 추천 | 5인 · CTO | `notion-publish` · `slack-worklog` · `doc-drift-check` | [서비스](https://town-signal.vercel.app) · [GitHub](https://github.com/Town-Signal) |
+| **NowWhat** — 할 일 우선순위 추천 | 1인 · 3일 | `api-verify` · `repo-showcase` · `templates/CLAUDE.md` | [GitHub](https://github.com/FAITRUEE?tab=repositories&q=NowWhat) |
 | **낙상 감지** — 소리로 낙상을 감지해 보호자에게 알림 | 5인 · 팀장 · 기업 과제 | `templates/CLAUDE.md` · `github-team-setup` | [서비스](https://audio-fall-care-web.vercel.app) · [GitHub](https://github.com/AudioFallCare) |
+
+표 밖에서 나온 스킬 — `oof-error-analysis`(2026년 10월 분류 대회) · `contribution-audit`(프로젝트 13개 정리) · `workspace-cleanup`(지원서 작업 폴더 정리)
 
 <details>
 <summary><b>프로젝트별로 AI와 어떻게 일했는지 펼쳐 보기</b></summary>
