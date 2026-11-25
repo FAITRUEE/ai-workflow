@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI와 일하는 방식 — Claude Code 스킬 11종</title>
-<meta name="description" content="AI에게 맡기고, 직접 재 보고, 확인한 것은 남기는 Claude Code 스킬 11종과 양식 2종">
+<title>AI와 일하는 방식 — Claude Code 스킬 12종</title>
+<meta name="description" content="AI에게 맡기고, 직접 재 보고, 확인한 것은 남기는 Claude Code 스킬 12종과 양식 2종">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
   --paper:#F3F6FB; --line:#DCE3EE; --white:#fff;
   --night:#0B1220; --night-2:#1E1B4B;
   --guess:#F59E0B; --sure:#38BDF8;
-  --g-verify:#0284C7; --g-team:#7C3AED; --g-record:#059669;
+  --g-verify:#0284C7; --g-team:#7C3AED; --g-record:#059669; --g-clean:#D97706;
   --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
 }
 *{box-sizing:border-box}
@@ -195,7 +195,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <a class="brand" href="#">ai-workflow</a>
       <div class="links">
         <a href="#pick">처음이라면</a>
-        <a href="#skills">스킬 11종</a>
+        <a href="#skills">스킬 12종</a>
         <a href="#loop">일하는 방식</a>
         <a href="#projects">프로젝트</a>
         <a href="https://github.com/FAITRUEE/ai-workflow">GitHub</a>
@@ -205,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="hero-grid">
       <div>
         <h1>AI와<br>일하는 방식</h1>
-        <p class="lede">AI가 "됐다"고 한 것을 그대로 적지 않습니다. 직접 재 보고, 확인한 것만 남깁니다. 그 규칙을 Claude Code가 매번 따르도록 옮긴 스킬 11종과 양식 2종입니다.</p>
+        <p class="lede">AI가 "됐다"고 한 것을 그대로 적지 않습니다. 직접 재 보고, 확인한 것만 남깁니다. 그 규칙을 Claude Code가 매번 따르도록 옮긴 스킬 12종과 양식 2종입니다.</p>
         <div class="install">
 <pre id="cmd"><span>&gt; </span>/plugin marketplace add FAITRUEE/ai-workflow
 <span>&gt; </span>/plugin install ai-workflow@ai-workflow</pre>
@@ -229,7 +229,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section id="pick">
     <div class="wrap">
       <h2 class="sec">처음이라면, 지금 상황부터</h2>
-      <p class="sec-lede">11개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 써 보세요.</p>
+      <p class="sec-lede">12개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 써 보세요.</p>
       <div class="pick">
         <div class="pick-row"><p>혼자 개발 중인데, AI가 "됐다"고 하는 게 불안하다</p>
           <div class="chips"><a class="chip" style="--c:var(--g-verify)" href="#assumption-check">assumption-check</a><a class="chip" style="--c:var(--g-verify)" href="#api-verify">api-verify</a></div></div>
@@ -243,13 +243,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="chips"><a class="chip" style="--c:var(--g-record)" href="#contribution-audit">contribution-audit</a><a class="chip" style="--c:var(--g-record)" href="#repo-showcase">repo-showcase</a></div></div>
         <div class="pick-row"><p>발표가 코앞인데 청중이 이해할지 모르겠다</p>
           <div class="chips"><a class="chip" style="--c:var(--g-record)" href="#presentation-review">presentation-review</a></div></div>
+        <div class="pick-row"><p>폴더에 쓸데없는 파일과 '_최종2' 같은 문서가 쌓였다</p>
+          <div class="chips"><a class="chip" style="--c:var(--g-clean)" href="#workspace-cleanup">workspace-cleanup</a></div></div>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="wrap">
-      <h2 class="sec">스킬 11종</h2>
+      <h2 class="sec">스킬 12종</h2>
       <p class="sec-lede">눌러서 펼치면 무엇을 하는지, 어떻게 부탁하면 켜지는지, 어떤 일에서 시작됐는지 볼 수 있습니다.</p>
 
       <div class="group" style="--c:var(--g-verify)">
@@ -402,6 +404,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
               <dt>시작된 곳</dt><dd>눈치 최종 발표(69장). "109/255가 뭔지 모를 것 같아", "AUC인지 F1인지 써야 할 것 같아"를 수십 번 반복한 뒤</dd>
             </dl>
             <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/presentation-review/SKILL.md">SKILL.md 읽기</a>
+          </div>
+        </details>
+      </div>
+
+      <div class="group" style="--c:var(--g-clean)">
+        <div class="group-head"><h3>정리</h3><span>AI가 남긴 것까지 치우고 끝내기</span></div>
+
+        <details class="skill" id="workspace-cleanup">
+          <summary><span class="sname">workspace-cleanup</span><span class="sline">쌓인 임시 파일은 휴지통으로, 뒤섞인 문서는 정본·지난 기록·폴더 안내로</span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="sbody">
+            <p>AI는 작업하면서 스크린샷, 중간 결과, "혹시 몰라" 만든 사본을 계속 남깁니다. 문서도 조사 메모, 검토 기록, '_최종', '_최종2'가 쌓이면 어느 게 진짜인지 나도 헷갈립니다. 둘을 같은 원칙으로 정리합니다. 먼저 보여 주고, 고른 것만, 되돌릴 수 있게.</p>
+            <div class="flow">① 파일: 크기순 후보 목록 → 고른 것만 휴지통으로<br>② 문서: 정본 · 참고 · 지난 기록으로 나누기 → "지금 → 정리 후" 계획 → 합치고 폴더 안내 한 장</div>
+            <dl>
+              <dt>이렇게 말해 보세요</dt><dd><span class="say">폴더 정리해 줘</span><span class="say">용량 너무 커</span><span class="say">문서가 너무 많아서 뭐가 뭔지 모르겠어</span></dd>
+              <dt>들어 있는 것</dt><dd><code>scripts/scan.py</code> 아무것도 지우지 않고 후보만 보여 줌. <code>--docs</code>로 문서 목록과 버전만 다른 같은 문서 묶음</dd>
+              <dt>시작된 곳</dt><dd>지원서 작업 폴더. 포트폴리오 파일에 남아 있던 안 쓰는 예전 그림을 정리해 15MB → 8MB로 줄이고, 스크립트·지난 점검·안내 문서로 폴더를 나눴던 일</dd>
+            </dl>
+            <a class="more" href="https://github.com/FAITRUEE/ai-workflow/blob/main/skills/workspace-cleanup/SKILL.md">SKILL.md 읽기</a>
           </div>
         </details>
       </div>

@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="docs/images/badge-plugin.svg" alt="Claude Code plugin">
-  <img src="docs/images/badge-skills.svg" alt="skills 11">
+  <img src="docs/images/badge-skills.svg" alt="skills 12">
   <img src="docs/images/badge-templates.svg" alt="templates 2">
   <img src="docs/images/badge-license.svg" alt="MIT license">
 </p>
@@ -13,7 +13,7 @@
   <a href="https://faitruee.github.io/ai-workflow/"><b>소개 페이지</b></a> ·
   <a href="#-설치">설치</a> ·
   <a href="#-처음이라면">처음이라면</a> ·
-  <a href="#-스킬-11종">스킬 11종</a> ·
+  <a href="#-스킬-12종">스킬 12종</a> ·
   <a href="#-일하는-방식">일하는 방식</a> ·
   <a href="#-프로젝트에서-실제로-한-것">프로젝트 사례</a> ·
   <a href="#-양식">양식</a>
@@ -26,12 +26,12 @@ AI 코딩 도구는 코드를 빨리 써 줍니다.
 그만큼 **확인하지 않은 예상이 사실처럼 문서에 적히기도 쉽습니다.**
 
 이 저장소는 프로젝트마다 그 문제를 겪으며 굳힌 규칙과,<br>
-그 규칙을 Claude Code가 매번 따르도록 옮긴 **스킬 11종 · 양식 2종**을 모은 것입니다.
+그 규칙을 Claude Code가 매번 따르도록 옮긴 **스킬 12종 · 양식 2종**을 모은 것입니다.
 
 > **AI에게는 초안과 구현을 맡기고,**<br>
 > **방향 · 기준 · 확인 · 병합은 제가 합니다.**
 
-🌐 **한눈에 보기** — 스킬 11종을 눌러 펼쳐 보는 소개 페이지: **[faitruee.github.io/ai-workflow](https://faitruee.github.io/ai-workflow/)**
+🌐 **한눈에 보기** — 스킬 12종을 눌러 펼쳐 보는 소개 페이지: **[faitruee.github.io/ai-workflow](https://faitruee.github.io/ai-workflow/)**
 
 <br>
 
@@ -84,7 +84,7 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 ## 🚀 처음이라면
 
-11개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 고르세요.
+12개를 다 볼 필요는 없습니다. 지금 하는 일에 맞는 것부터 고르세요.
 
 | 지금 상황 | 먼저 써 볼 스킬 |
 |---|---|
@@ -94,10 +94,11 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 | 노션 명세 · README가 지금 코드와 맞는지 모르겠다 | [`doc-drift-check`](skills/doc-drift-check/SKILL.md) |
 | 끝난 팀 프로젝트를 이력서 · 포트폴리오에 정리한다 | [`contribution-audit`](skills/contribution-audit/SKILL.md) · [`repo-showcase`](skills/repo-showcase/SKILL.md) |
 | 발표가 코앞인데 청중이 이해할지 모르겠다 | [`presentation-review`](skills/presentation-review/SKILL.md) |
+| 폴더에 쓸데없는 파일과 `_최종2` 같은 문서가 쌓였다 | [`workspace-cleanup`](skills/workspace-cleanup/SKILL.md) |
 
 <br>
 
-## 🧰 스킬 11종
+## 🧰 스킬 12종
 
 | 묶음 | 스킬 | 한 줄 |
 |---|---|---|
@@ -112,6 +113,7 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 | **기록 · 전달** | [`contribution-audit`](skills/contribution-audit/SKILL.md) | 팀 프로젝트에서 내가 한 것만 git blame · PR로 가려 남긴다 |
 | | [`repo-showcase`](skills/repo-showcase/SKILL.md) | 끝난 저장소를 직접 띄워 확인 → 버그 수정 → 새 스크린샷으로 README를 다시 만든다 |
 | | [`presentation-review`](skills/presentation-review/SKILL.md) | 발표 자료를 처음 듣는 청중 눈으로 쪽마다 점검하고, 고른 번호만 고친다 |
+| **정리** | [`workspace-cleanup`](skills/workspace-cleanup/SKILL.md) | 쌓인 임시 파일은 휴지통으로, 뒤섞인 문서는 정본 · 지난 기록 · 폴더 안내로 |
 
 <br>
 
@@ -290,6 +292,27 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 
 <br>
 
+### 정리
+
+#### 🧹 `workspace-cleanup` — 쌓인 파일 치우고, 복잡한 문서 정리
+
+AI는 작업하면서 스크린샷 · 중간 결과 · "혹시 몰라" 만든 사본을 계속 남깁니다.<br>
+문서도 조사 메모 · 검토 기록 · `_최종` · `_최종2`가 쌓이면 **어느 게 진짜인지 나도 헷갈립니다.**
+
+**① 필요 없는 파일** — 크기순 목록을 보여 주고, 고른 것만 **휴지통으로** 보냅니다.
+
+```text
+AI 작업 찌꺼기 · 캐시 · 사본/이전본 · 어디에서도 안 쓰는 그림 · (열려 있는 파일은 건드리지 않음)
+```
+
+**② 복잡한 문서** — 정본 · 참고 · 지난 기록으로 나누고, 흩어진 내용은 정본 하나로 합치고, 폴더 안내(README) 한 장을 만듭니다. 옮기기 전에 **"지금 → 정리 후" 계획부터** 보여 줍니다.
+
+- **이렇게 말해 보세요** — *"폴더 정리해 줘"* · *"용량 너무 커"* · *"문서가 너무 많아서 뭐가 뭔지 모르겠어"*
+- **들어 있는 것** — `scripts/scan.py` (아무것도 지우지 않고 후보만 보여 줌, `--docs`로 문서 목록과 버전만 다른 같은 문서 묶음)
+- **시작된 곳** — 지원서 작업 폴더. 포트폴리오 파일에 남아 있던 안 쓰는 예전 그림을 정리해 15MB → 8MB로 줄이고, 스크립트 · 지난 점검 · 안내 문서로 폴더를 나눴던 일
+
+<br>
+
 ## 🔁 일하는 방식
 
 <img src="docs/images/loop.svg" alt="1 맥락을 먼저 → 2 역할을 나눈다 → 3 직접 재 본다 → 4 남기고 스킬로" width="100%">
@@ -416,7 +439,8 @@ ai-workflow/
 │   ├── github-team-setup/    # + templates/ (labeler · PR · 이슈 템플릿)
 │   ├── contribution-audit/   # 내 기여만 가려 문서로
 │   ├── repo-showcase/        # 저장소를 보여 줄 수 있는 상태로
-│   └── presentation-review/  # 청중 눈으로 발표 자료 점검
+│   ├── presentation-review/  # 청중 눈으로 발표 자료 점검
+│   └── workspace-cleanup/    # + scripts/scan.py
 ├── templates/                # CLAUDE.md · COLLAB.md 양식
 └── docs/                     # 소개 페이지(index.html) · README 그림 · 실제 화면
 ```
