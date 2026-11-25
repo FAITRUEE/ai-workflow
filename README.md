@@ -117,9 +117,14 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 
 <br>
 
+> 스킬 이름을 누르면 자세한 설명이 펼쳐집니다.
+
 ### 확인 · 검증
 
-#### ✅ `assumption-check` — 확인하고 적기
+<details>
+<summary>✅ <b><code>assumption-check</code></b> — 확인하고 적기</summary>
+
+<br>
 
 "작동한다"를 문서에 적기 전에, 그 경로를 **실제로 한 번 통과시킵니다.**
 
@@ -136,7 +141,12 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 - **시작된 곳** — SoftBank 해커톤 One Action
   - 캐시로 **42초 줄인다**던 AI의 예상이, 실측으로는 **20초 손해**였던 일
 
-#### 🖥️ `api-verify` — 서버 띄워서 실제 API로 확인
+</details>
+
+<details>
+<summary>🖥️ <b><code>api-verify</code></b> — 서버 띄워서 실제 API로 확인</summary>
+
+<br>
 
 단위 테스트가 통과해도, 실제 서버에서는 인증 필터 · 직렬화 · 설정 때문에 다르게 동작합니다.
 
@@ -151,7 +161,12 @@ cp -r ai-workflow/skills/assumption-check ~/.claude/skills/
 - **시작된 곳** — NowWhat (1인 · 3일)
   - Windows에서 `curl`에 한글을 바로 넣으면 깨져서 **403처럼 보이던** 함정까지 기록
 
-#### 🧭 `doc-drift-check` — 문서가 지금 코드와 맞는지
+</details>
+
+<details>
+<summary>🧭 <b><code>doc-drift-check</code></b> — 문서가 지금 코드와 맞는지</summary>
+
+<br>
 
 AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 · 배포 문서는 처음 쓴 날에 멈춰 있기 쉽습니다.<br>
 그러면 팀원도, 다음 작업을 하는 AI도 **낡은 문서를 정본으로 믿고** 일합니다.
@@ -166,7 +181,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **시작된 곳** — 타운시그널. 노션 문서를 붙여 넣고 코드와 대조하는 일을 5번 반복
   - 내 담당 문서 4개가 모두 그날 머지한 PR #13~#18을 반영하지 못하고 있었던 일
 
-#### 🔍 `oof-error-analysis` — 분류 모델의 실수 뜯어보기
+</details>
+
+<details>
+<summary>🔍 <b><code>oof-error-analysis</code></b> — 분류 모델의 실수 뜯어보기</summary>
+
+<br>
 
 점수 하나만 보지 않습니다.
 
@@ -180,11 +200,16 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **이렇게 말해 보세요** — *"어디서 틀렸는지 봐 줘"* · *"다음 피처 찾아 줘"* · *"#5랑 #6 뭐가 달라?"*
 - **들어 있는 것** — `scripts/analyze.py` (numpy · pandas만 필요)
 
+</details>
+
 <br>
 
 ### 팀 협업
 
-#### 💬 `slack-worklog` — [작업 시작] · [작업 정리] 초안
+<details>
+<summary>💬 <b><code>slack-worklog</code></b> — [작업 시작] · [작업 정리] 초안</summary>
+
+<br>
 
 오늘 머지된 PR · 실험 기록 · 다음 할 일을 모아 슬랙 초안을 만듭니다.
 
@@ -197,7 +222,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **이렇게 말해 보세요** — *"작업 시작 메시지 써 줘"* · *"오늘 한 거 정리해서 슬랙에"*
 - **시작된 곳** — One Action에서 같은 기능을 두 사람이 만드는 일이 두 번 생긴 뒤, 타운시그널에서 스킬로
 
-#### 🗂️ `notion-team-hub` — 노션 팀 공간 + 팀원 AI 연결
+</details>
+
+<details>
+<summary>🗂️ <b><code>notion-team-hub</code></b> — 노션 팀 공간 + 팀원 AI 연결</summary>
+
+<br>
 
 새 팀 프로젝트의 노션을 정해진 틀로 깔고, 다 만든 뒤 문서끼리 맞는지 점검합니다.
 
@@ -217,7 +247,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
   - `references/` — 홈 틀 · 팀원 연결 절차 · 공지문
   - `scripts/verify_notion_integration.py` — 토큰으로 무엇이 보이는지 확인
 
-#### 📝 `notion-publish` — md 원고 → 노션 정본
+</details>
+
+<details>
+<summary>📝 <b><code>notion-publish</code></b> — md 원고 → 노션 정본</summary>
+
+<br>
 
 **노션이 정본, 로컬 md는 원고**입니다.
 
@@ -230,7 +265,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 
 - **이렇게 말해 보세요** — *"이 부분 노션에 반영해"* · *"노션 문서 고쳐 줘"*
 
-#### 🐙 `github-team-setup` — 첫날 깔아 두는 GitHub 협업 체계
+</details>
+
+<details>
+<summary>🐙 <b><code>github-team-setup</code></b> — 첫날 깔아 두는 GitHub 협업 체계</summary>
+
+<br>
 
 - 조직 하나 + `AI` · `BE` · `FE` 저장소
 - 조직 공통 PR · 이슈 템플릿
@@ -242,11 +282,16 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **이렇게 말해 보세요** — *"깃허브 세팅해 줘"* · *"PR 템플릿 만들고 라벨 자동으로 붙게"*
 - **시작된 곳** — 낙상 감지 · 온점 · 눈치 · 스터디 매칭 서비스에서 매번 같은 것을 깔던 일
 
+</details>
+
 <br>
 
 ### 기록 · 전달
 
-#### 🧾 `contribution-audit` — 내가 한 것만 가려 문서로
+<details>
+<summary>🧾 <b><code>contribution-audit</code></b> — 내가 한 것만 가려 문서로</summary>
+
+<br>
 
 팀 프로젝트를 서류에 쓸 때 가장 흔한 실수는 **팀 결과를 내 것처럼 쓰는 것**입니다.
 
@@ -260,7 +305,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **이렇게 말해 보세요** — *"이 프로젝트 내 기여 정리해 줘"* · *"이거 서류에 써도 되는지 봐 줘"*
 - **시작된 곳** — 프로젝트 13개를 이 틀로 정리
 
-#### 🪄 `repo-showcase` — 저장소를 보여 줄 수 있는 상태로
+</details>
+
+<details>
+<summary>🪄 <b><code>repo-showcase</code></b> — 저장소를 보여 줄 수 있는 상태로</summary>
+
+<br>
 
 서류에 저장소 링크를 걸면 심사자는 README 첫 화면과 데모 하나만 눌러 봅니다.<br>
 그런데 끝난 프로젝트는 대개 **데모가 깨져 있거나, README 사진이 예전 화면**입니다.
@@ -273,7 +323,12 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **시작된 곳** — 바이브코딩 공모전 저장소 · NowWhat
   - 돌려 보니 서명 시뮬레이터에서 **버그 4개**(결과가 한 줄로 뭉침, 예시 입력이 비어 있음 등)가 나와 고친 뒤 사진을 새로 찍음
 
-#### 🎤 `presentation-review` — 청중 눈으로 발표 자료 점검
+</details>
+
+<details>
+<summary>🎤 <b><code>presentation-review</code></b> — 청중 눈으로 발표 자료 점검</summary>
+
+<br>
 
 만든 사람은 모든 숫자의 뜻을 알지만, 청중은 그 장을 처음 몇 초 보고 넘어갑니다.<br>
 장마다 *"처음 듣는 사람이 여기서 무엇을 가져가나"* 만 묻습니다.
@@ -290,11 +345,16 @@ AI와 일하면 코드는 하루에도 여러 번 바뀌는데, 노션 명세 ·
 - **이렇게 말해 보세요** — *"청중이 이해할까?"* · *"최종 점검해 줘"* · *"예상 질문 뽑아 줘"*
 - **시작된 곳** — 눈치 최종 발표(69장). "이 숫자 뭔지 모를 것 같아"를 수십 번 반복한 뒤
 
+</details>
+
 <br>
 
 ### 정리
 
-#### 🧹 `workspace-cleanup` — 쌓인 파일 치우고, 복잡한 문서 정리
+<details>
+<summary>🧹 <b><code>workspace-cleanup</code></b> — 쌓인 파일 치우고, 복잡한 문서 정리</summary>
+
+<br>
 
 AI는 작업하면서 스크린샷 · 중간 결과 · "혹시 몰라" 만든 사본을 계속 남깁니다.<br>
 문서도 조사 메모 · 검토 기록 · `_최종` · `_최종2`가 쌓이면 **어느 게 진짜인지 나도 헷갈립니다.**
@@ -310,6 +370,8 @@ AI 작업 찌꺼기 · 캐시 · 사본/이전본 · 어디에서도 안 쓰는 
 - **이렇게 말해 보세요** — *"폴더 정리해 줘"* · *"용량 너무 커"* · *"문서가 너무 많아서 뭐가 뭔지 모르겠어"*
 - **들어 있는 것** — `scripts/scan.py` (아무것도 지우지 않고 후보만 보여 줌, `--docs`로 문서 목록과 버전만 다른 같은 문서 묶음)
 - **시작된 곳** — 지원서 작업 폴더. 포트폴리오 파일에 남아 있던 안 쓰는 예전 그림을 정리해 15MB → 8MB로 줄이고, 스크립트 · 지난 점검 · 안내 문서로 폴더를 나눴던 일
+
+</details>
 
 <br>
 
