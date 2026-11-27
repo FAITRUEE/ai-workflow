@@ -257,7 +257,7 @@ footer a{color:var(--muted)}
   .grid{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(2,1fr)}
   .loop{grid-template-columns:1fr 1fr} .step::after{display:none!important}
-  .nav nav a:not(.gh):not(.pf){display:none}
+  .nav nav a:not(.gh){display:none}
 }
 @media (max-width:640px){
   .wrap{width:calc(100% - 32px)}
@@ -276,14 +276,6 @@ footer a{color:var(--muted)}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
   .card,.rv,.ln,.step{opacity:1!important;transform:none!important}
 }
-.nav nav a.pf{color:var(--cyan)}
-.pf-card{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:center;margin:28px 0 0;padding:22px 26px;border:1px solid var(--line2);border-radius:16px;background:var(--panel);text-decoration:none;color:var(--text);transition:transform .2s,border-color .2s,box-shadow .2s}
-.pf-card:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 18px 40px -18px var(--cyan)}
-.pf-k{grid-column:1/-1;font:600 12px var(--mono);color:var(--cyan)}
-.pf-t{font:800 19px var(--sans);letter-spacing:-.02em}
-.pf-s{grid-column:1;font-size:14px;color:var(--muted)}
-.pf-go{grid-column:2;grid-row:2/4;font:700 14px var(--mono);color:var(--cyan);white-space:nowrap}
-@media (max-width:720px){.pf-card{grid-template-columns:1fr}.pf-go{grid-column:1;grid-row:auto;margin-top:8px}}
 </style>
 </head>
 <body>
@@ -294,7 +286,7 @@ footer a{color:var(--muted)}
     <a class="brand" href="#top"><b>~/</b>ai-workflow<span class="cur"></span></a>
     <nav aria-label="페이지 안 이동">
       <a href="#pick">상황별</a><a href="#skills">스킬</a><a href="#loop">일하는 방식</a><a href="#projects">프로젝트</a>
-      <a class="pf" href="https://faitruee-portfolio.vercel.app">포트폴리오 ↗</a><a class="gh" href="https://github.com/FAITRUEE/ai-workflow">GitHub ↗</a>
+      <a class="gh" href="https://github.com/FAITRUEE/ai-workflow">GitHub ↗</a>
     </nav>
   </div>
 </header>
@@ -306,7 +298,7 @@ footer a{color:var(--muted)}
         <a class="pill" href="https://github.com/FAITRUEE/ai-workflow"><b>v1.3.0</b>Claude Code 플러그인 · 스킬 12종 · MIT</a>
         <h1><span class="l">혼자 잘 쓰던 AI를,</span><span class="l"><span class="c">모두가 쓰는 방식으로.</span></span></h1>
         <p class="lede">맡기고, 직접 재 보고, 확인한 것은 남깁니다. 그렇게 남긴 규칙을 누구나 설치해 쓸 수 있게 나눈 <b>Claude Code 스킬 12종</b>입니다. 평소 말투로 부탁하면 맞는 스킬이 알아서 켜집니다.</p>
-        <div class="cta"><a class="btn primary" href="#skills">스킬 12종 보기</a><a class="btn" href="https://github.com/FAITRUEE/ai-workflow">GitHub ↗</a></div>
+        <div class="cta"><a class="btn primary" href="#skills">스킬 12종 보기</a><a class="btn" href="https://github.com/FAITRUEE/ai-workflow">GitHub ↗</a><a class="btn" href="https://faitruee-portfolio.vercel.app">포트폴리오 ↗</a></div>
         <div class="install">
           <div class="cmds"><div><span class="p">❯</span> /plugin marketplace add FAITRUEE/ai-workflow</div><div><span class="p">❯</span> /plugin install ai-workflow@ai-workflow</div></div>
           <button class="copy" type="button" data-copy="/plugin marketplace add FAITRUEE/ai-workflow&#10;/plugin install ai-workflow@ai-workflow">복사</button>
@@ -497,7 +489,6 @@ footer a{color:var(--muted)}
         </tbody>
       </table></div>
       <p class="outside rv">표 밖에서 나온 스킬: <code>oof-error-analysis</code>(2026년 10월 분류 대회), <code>contribution-audit</code>(프로젝트 13개 정리), <code>workspace-cleanup</code>(지원서 작업 폴더 정리)</p>
-      <a class="pf-card rv" href="https://faitruee-portfolio.vercel.app"><span class="pf-k">$ open portfolio</span><span class="pf-t">이 프로젝트들이 무엇을 풀었고 어떻게 끝났는지는 포트폴리오에서</span><span class="pf-s">프로젝트 13개를 문제 → 한 일 → 결과 순서로 · 발표 자료 · 시연 영상</span><span class="pf-go">faitruee-portfolio.vercel.app ↗</span></a>
     </div>
   </section>
 
@@ -514,7 +505,7 @@ footer a{color:var(--muted)}
   </section>
 </main>
 
-<footer><div class="wrap"><span>MIT · 새 스킬 PR은 받지 않고, 막힌 점은 <a href="https://github.com/FAITRUEE/ai-workflow/issues">이슈</a>로 받습니다.</span><span>만든 사람 이성진 · <a href="https://faitruee-portfolio.vercel.app">포트폴리오</a> · <a href="https://github.com/FAITRUEE/ai-workflow">GitHub</a></span></div></footer>
+<footer><div class="wrap"><span>MIT · 새 스킬 PR은 받지 않고, 막힌 점은 <a href="https://github.com/FAITRUEE/ai-workflow/issues">이슈</a>로 받습니다.</span><a href="https://github.com/FAITRUEE/ai-workflow">github.com/FAITRUEE/ai-workflow</a></div></footer>
 
 <dialog id="dlg" aria-labelledby="dname">
   <div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span id="dpath"></span><span class="sp"></span>
